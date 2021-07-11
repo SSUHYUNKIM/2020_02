@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylepredict.css?after">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>범죄예측 시스템</title>
+</head>
+
+<body>
+  <body style="overflow-x:hidden">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul class="nav">
+        <li>
+          <a href="main.html">
+            <span>&nbsp;&nbsp;&nbsp;Main</span>
+          </a>
+        </li>
+        <li>
+          <a href="data.html">
+            <span>&nbsp;&nbsp;&nbsp;Data</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>&nbsp;&nbsp;&nbsp;Model</span>
+          </a>
+          <li><a href="linear.html">&nbsp;&nbsp;&nbsp;&nbsp;-다중회귀모델</a></li>
+          <li><a href="SGD.html">&nbsp;&nbsp;&nbsp;&nbsp;-SGD</a></li>
+          <li><a href="ADAM.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADAM</a></li>
+          <li><a href="ADAGRAD.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADAGRAD</a></li>
+          <li><a href="ADADELTA.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADADELTA</a></li>
+          <li><a href="RMSPROP.html">&nbsp;&nbsp;&nbsp;&nbsp;-RMSPROP</a></li>
+        </li>
+        <li>
+          <a href="predict.html">
+            <span>&nbsp;&nbsp;&nbsp;Predict</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+    </div>
+    <div class="content">
+      <div class="header">
+        신도시 개발을 위한 범죄 분석 알고리즘</div><br><br>
+        <div class="text">
+          <form name ="crime">
+            <div class="jumbotron" style="padding-top: 20px;">
+              <table frame=void>
+                <thead>
+                  <tr>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px ; width:200px;height:40px;">CCTV</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px;width:200px;height:40px;">CCTVuntil</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px;width:200px;height:40px;">Divorce</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px; width:200px;height:40px;">1person</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" id="x1" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x2" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x3" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x4" style="width:200px;height:30px;font-size:20px; " placeholder="0~100"></td><br>
+                  </tr>
+                  <tr>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px; width:200px;height:40px;">F1person</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px; width:200px;height:40px;">Elderly</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px; width:200px;height:40px;">Police</th>
+                    <th style="background-color: #FDA4A4; text-align: center; font-size: 20px; width:200px;height:40px;">Property_tax</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="x5" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x6" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x7" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                    <td><input type="text" id="x8" style="width:200px;height:30px;font-size:20px;" placeholder="0~100"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="jumbotron" style="padding-top: 20px;">
+                <br><br>
+                <input type="button" value="입력" onClick="calcNow()" onClick="get()" style="width:80px; font-size: 20px; height:40px; background-color:#C8EAFA; border:none; color:#494949"/>
+                <input type="reset" style="width:80px; height:40px; font-size: 20px; background-color:#C8EAFA; border:none; color:#494949">
+                <br />
+                <br />
+                <br />
+                <p style="transform: translate(0%,-50%); font-size:25px; font-weight: bold;">범죄율</p><br> <input style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; font-size:25px; transform: translate(0%,-50%); text-align: center; " maxlength="6" oninput="numberMaxLength(this);" type="text" name="calreg" readonly /><br />
+              </div>
+            </div>
+          </div>
+          <script>
+          function calcNow(){
+            crime.calreg.value = regression(crime.x1.value, crime.x2.value, crime.x3.value, crime.x4.value, crime.x5.value, crime.x6.value, crime.x7.value, crime.x8.value);
+          }
+          function regression(x1, x2, x3, x4, x5, x6, x7, x8){
+            return (1.545349)*Number(x1)+(-11.900023)*Number(x2)+(17.127682)*Number(x3)+ (34.361566)*Number(x4)+ (-0.657954)*Number(x5)+ (-17.029634)*Number(x6)+ (24.314773)*Number(x7)+(9.968967)*Number(x8) + 765.697596;
+          }
+          </script>
+        </form>
+      </div>
+    </body>
+    </html>

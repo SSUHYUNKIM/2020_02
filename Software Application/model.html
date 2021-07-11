@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>범죄예측 시스템</title>
+</head>
+<body>
+  <div class="btn">
+    <span class="fas fa-bars"></span>
+  </div>
+  <nav class="sidebar">
+    <div class="text">
+      Menu</div>
+      <ul>
+        <li class="active"><a href="main.html">Main</a></li>
+        <li>
+          <a href="data.html">
+            <span>&nbsp;&nbsp;&nbsp;Data</span>
+          </a>
+          <ul class="feat-show">
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="serv-btn">Model
+            <span class="fas fa-caret-down second"></span>
+          </a>
+          <ul class="serv-show">
+            <li><a href="linear.html">다중회귀모델</a></li>
+            <li><a href="SGD.html">SGD</a></li>
+            <li><a href="ADAM.html">ADAM</a></li>
+            <li><a href="ADAGRAD.html">ADAGRAD</a></li>
+            <li><a href="ADADELTA.html" selected>ADADELTA</a></li>
+            <li><a href="RMSPROP.html">RMSPROP</a></li>
+          </ul>
+        </li>
+        <li><a href="predict.html">Predict</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="header">
+        신도시 개발을 위한 범죄 분석 알고리즘</div>
+        <p>
+          HTML CSS & Javascript (Full Tutorial)</p>
+        </div>
+        <script>
+        $('.btn').click(function(){
+          $(this).toggleClass("click");
+          $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function(){
+          $('nav ul .feat-show').toggleClass("show");
+          $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function(){
+          $('nav ul .serv-show').toggleClass("show1");
+          $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function(){
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+        </script>
+
+      </body>
+      </html>

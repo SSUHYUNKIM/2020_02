@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar start here  */
+.sidebar{
+    position: fixed;
+    background: #000000;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar h2{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #000000;
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a{
+    color: #ffffff;
+    padding: 0 30px;
+
+}
+.sidebar ul li a:hover{
+    color: #000000;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+/* Sidebar end Here  */
+
+/* Main Content Section Start Here  */
+
+.main{
+    margin-left: 200px;
+    padding: 5px;
+}
+
+.main h2{
+    margin-top: 20px;
+}
+.content{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: #202020;
+  z-index: -1;
+}
+.content .header{
+  transform: translate(-35%,-50%);
+  font-size: 35px;
+  font-weight: 550;
+  text-align: center;
+}
+.content p{
+  transform: translate(-75%,-40%);
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content .text{
+  transform: translate(-35%,10%);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 0 0
+  white-space: nowrap;
+}
+.content .text2{
+  transform: translate(-35%,10%);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 0 0
+  white-space: nowrap;
+}

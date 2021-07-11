@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styledata.css?after">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>범죄예측 시스템</title>
+</head>
+<body style="overflow-x:hidden">
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul class="nav">
+      <li>
+        <a href="main.html">
+          <span>&nbsp;&nbsp;&nbsp;Main</span>
+        </a>
+      </li>
+      <li>
+        <a href="data.html">
+          <span>&nbsp;&nbsp;&nbsp;Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>&nbsp;&nbsp;&nbsp;Model</span>
+        </a>
+        <li><a href="linear.html">&nbsp;&nbsp;&nbsp;&nbsp;-다중회귀모델</a></li>
+        <li><a href="SGD.html">&nbsp;&nbsp;&nbsp;&nbsp;-SGD</a></li>
+        <li><a href="ADAM.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADAM</a></li>
+        <li><a href="ADAGRAD.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADAGRAD</a></li>
+        <li><a href="ADADELTA.html">&nbsp;&nbsp;&nbsp;&nbsp;-ADADELTA</a></li>
+        <li><a href="RMSPROP.html">&nbsp;&nbsp;&nbsp;&nbsp;-RMSPROP</a></li>
+      </li>
+      <li>
+        <a href="predict.html">
+          <span>&nbsp;&nbsp;&nbsp;Predict</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main">
+  </div>
+  <div class="content">
+    <div class="header">
+      신도시 개발을 위한 범죄 분석 알고리즘</div><br><br>
+      <div class="text">
+        <ll>
+          <style="float:left">
+          <form>
+            <span style = "color: orange;">
+              <div class="jumbotron" style="padding-top: 20px;">
+                <hr>
+                <h3>Model 최적화를 고려해 ln값을, 트레이닝 데이터는 2014~2017년 서울시 25개 구의 자료를 사용하였습니다.</h3>
+                <hr>
+              </div>
+            </span>
+
+            <div class="jumbotron" style="padding-top: 20px;">
+              <img src="http://drive.google.com/uc?export=view&id=15jciA454CWYW9mWqO3SP-hfIkKAFzDkJ" alt ="끝내주는 데이터 사진입니다." style="width:1000px; height:400px;" title="끝내주는 데이터 사진입니다." / >
+            </div>
+            <div class="jumbotron" style="padding-top: 20px;">
+            </div>
+            <hr>
+
+            <span style = "color: gray;">
+              <div class="jumbotron" style="padding-top: 20px;">
+                <h4>
+                  <p>0. Crime:<br>최종적으로 예측하려는 지표(발생할 범죄 수/인구 수)</p>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>1. CCTV:<br>해당 연도에 생긴 cctv 비율(해당 연도에 생긴 cctv 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>2. CCTVuntil:<br>해당연도까지 생긴 총 cctv 비율(총 cctv 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>3. Divorce:<br>이혼율(이혼건수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>4. 1person:<br>1인가구비율(1인가구 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>5. F1person:<br>여성 1인가구의 비율(여성 1인가구의 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>6. Elderly:<br>65세이상 고령인구의 비율(고령인구 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>7. Police:<br>치안시설의 비율(치안시설의 수/인구 수)</p>
+                  </div>
+                  <div class="jumbotron" style="padding-top: 15px;">
+                    <p>8. Property_tax:<br>평균 재산세(총 재산세/ 인구 수)</p><br><br><br>
+                  </div>
+                </h4>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+      </form></ll>
+    </body>
+    </html>
